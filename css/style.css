@@ -557,7 +557,7 @@ nav li {
 }
 .block5 p {
   font-size: 18px;
-  /* padding: 25px 24%; */
+  padding: 25px 24%;
 }
 .block5_int {
   width: 60%;
@@ -859,6 +859,23 @@ footer .navbar {
 footer .nav-item {
   margin-left: 20px;
 }
+#go-top {
+  position: fixed;
+  bottom: 25px;
+  right: 30px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  width: 35px;
+  height: 35px;
+  line-height: 30px;
+  border-radius: 50px;
+  border: 2px solid #c0c0c0;
+}
+#go-top:hover {
+  background: #333;
+  color: #fff;
+}
 /* Оформление всплывающих окон */
 .popup {
   display: none;
@@ -932,6 +949,9 @@ footer .nav-item {
   }
   .production .card-text {
     margin-top: 0;
+  }
+  .block5 p {
+    padding: 0;
   }
   .block5-1,
   .block5-2,

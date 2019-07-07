@@ -562,7 +562,7 @@ nav {
 	}
 	p {
 		font-size: 18px;
-		/* padding: 25px 24%; */
+		 padding: 25px 24%; 
 	}
 	&_int {
 		width: 60%;
@@ -851,6 +851,25 @@ footer {
 	}
 }
 
+#go-top {
+  position: fixed; 
+  bottom: 25px; 
+  right: 30px;
+  text-align: center;
+  cursor:pointer; 
+  display:none;
+  width: 35px;
+  height: 35px;
+  line-height: 30px;
+  border-radius: 50px;
+  border:2px solid #c0c0c0;
+}
+
+#go-top:hover {
+  background: #333;
+  color: #fff;
+}
+
 
 
 /* Оформление всплывающих окон */
@@ -944,7 +963,9 @@ footer {
 		}
 	}
 	.block5 {
-
+		p {
+			padding: 0;
+		}
 		&-1,&-2,&-3 {
 			width: 100%;
 			margin-top: 10px;	

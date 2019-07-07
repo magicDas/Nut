@@ -17,9 +17,9 @@
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 
-	<body>
+<body>
 
-	<main class="main">		
+	<main>		
 		<div class="header">				
 			<div class="top">
 				<div class="container">
@@ -104,10 +104,10 @@
 		    		  <div class="collapse navbar-collapse" id="collapsibleNavbar">
 		    		    <ul class="navbar-nav m-auto">
 		    		      <li class="nav-item">
-		    		        <a class="nav-link" href="#">Магазин</a>
+		    		        <a class="nav-link" href="#market">Магазин</a>
 		    		      </li>
 		    		      <li class="nav-item">
-		    		        <a class="nav-link" href="#">О производстве</a>
+		    		        <a class="nav-link" href="#about">О производстве</a>
 		    		      </li>
 		    		      <li class="nav-item">
 		    		        <a class="nav-link" href="#">Оплата и доставка</a>
@@ -116,10 +116,10 @@
 		    		        <a class="nav-link" href="#">Оптовым и корпоративным клиентам</a>
 		    		      </li>
 		    		      <li class="nav-item">
-		    		        <a class="nav-link" href="#">Новости и статьи</a>
+		    		        <a class="nav-link" href="#news">Новости и статьи</a>
 		    		      </li>
 		    		      <li class="nav-item">
-		    		        <a class="nav-link" href="#">Контакты</a>
+		    		        <a class="nav-link" href="#contacts">Контакты</a>
 		    		      </li>    
 		    		    </ul>
 		    		  </div>  
@@ -140,7 +140,7 @@
 		</div>
 	</section>
 
-	<section class="production">
+	<section class="production" id="market">
 		<div class="container">
 			<h2>Продукция</h2>
 			<p>Экологически чистые, качественные ядра грецкого ореха и фундука, а также плоды шиповника в удобной, надежной, вакуумной упаковке разного объема</p>
@@ -568,7 +568,7 @@
 		</div>	
 	</section>
 
-	<section class="about">
+	<section class="about" id="about">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5 pt-2 col-sm-12">
@@ -675,7 +675,7 @@
 		</div>
 	</section>
 
-	<section class="news">
+	<section class="news" id="news">
 		<div class="container">
 			<h2>Новости</h2>
 			<p>Свежие новости и полезная информация</p>
@@ -747,7 +747,7 @@
 		</div>
 	</section>
 
-	<section class="contacts">
+	<section class="contacts" id="contacts">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
@@ -878,6 +878,14 @@
 
 		<script>
 			$(document).ready(function(){
+				$(".menu").on("click","a", function (event) {
+					event.preventDefault();
+					var id  = $(this).attr('href'),
+					top = $(id).offset().top;
+					$('body,html').animate({scrollTop: top}, 1500);
+				});
+
+				$('body').append('<a href="#" id="go-top" title="Вверх">▲</a>');
 				/*$('.popup-btn').on('click', function(event) {
 					event.preventDefault();
 					$('.popup').fadeIn();
@@ -944,6 +952,28 @@
 				  	]
 				});
 
+			});
+
+			
+			 
+			
+			$(function() {
+			 $.fn.scrollToTop = function() {
+			  $(this).hide().removeAttr("href");
+			  if ($(window).scrollTop() >= "250") $(this).fadeIn("slow")
+			  var scrollDiv = $(this);
+			  $(window).scroll(function() {
+			   if ($(window).scrollTop() <= "250") $(scrollDiv).fadeOut("slow")
+			   else $(scrollDiv).fadeIn("slow")
+			  });
+			  $(this).click(function() {
+			   $("html, body").animate({scrollTop: 0}, "slow")
+			  })
+			 }
+			});
+
+			$(function() {
+			 $("#go-top").scrollToTop();
 			});
 		</script>
 	

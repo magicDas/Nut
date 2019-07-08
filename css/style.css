@@ -104,10 +104,6 @@ span {
   font-family: 'Montserrat-Medium', sans-serif;
   font-weight: 600;
 }
-/* .card {
-	max-width: 380px;
-	max-height: 515px;
-} */
 .sign-lang,
 .messendger,
 .yoga,
@@ -280,16 +276,14 @@ nav li {
 }
 .production {
   text-align: center;
-  /* .card-deck {
-		margin-bottom: 40px;
-	}
-	.slick-active {
-	  outline: none;
-	} */
+  padding-bottom: 20px;
 }
 .production p {
   font-size: 18px;
   padding: 25px 24%;
+}
+.production .container {
+  position: relative;
 }
 .production .arrow {
   top: 23%;
@@ -303,7 +297,7 @@ nav li {
   opacity: .7;
 }
 .production .prev {
-  left: 10px;
+  left: 20px;
   background: url(../images/arrow-left4.png) center no-repeat;
   background-size: 70%;
 }
@@ -315,7 +309,7 @@ nav li {
   z-index: 100;
 }
 .production .next {
-  right: 10px;
+  right: 20px;
   background: url(../images/right-arrow.png) center no-repeat;
   background-size: 70%;
 }
@@ -323,10 +317,9 @@ nav li {
   margin-bottom: 40px;
 }
 .production .card {
-  /* margin-left: 10px;
-		margin-right: 10px;
-		height: 527px;*/
-  width: 350px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 527px;
 }
 .production .card:hover {
   border: 1px solid #93B474;
@@ -371,24 +364,24 @@ nav li {
 .production .card-body p {
   padding: 0;
 }
-.production .card-body .card-title {
+.production .card-title {
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 10px;
 }
-.production .card-body .card-art {
+.production .card-art {
   font-size: 15px;
   color: #8a8a8a;
 }
-.production .card-body .card-text {
+.production .card-text {
   font-size: 16px;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  width: 250px;
+  /* width: 250px; */
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.production .card-body .card-set {
+.production .card-set {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,24 +390,38 @@ nav li {
           justify-content: space-between;
   font-size: 14px;
 }
-.production .card-body .card-set .massa,
-.production .card-body .card-set .pack {
-  line-height: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.production .card-set .massa,
+.production .card-set .pack {
+  line-height: 1.2;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.production .card-body .card-set .massa img,
-.production .card-body .card-set .pack img {
-  vertical-align: middle;
-  margin-right: 10px;
+.production .card-set .massa div,
+.production .card-set .pack div {
+  display: inline-block;
 }
-.production .card-body .card-set .massa div,
-.production .card-body .card-set .pack div {
-  width: 75px;
+.production .card-set .pack:before {
+  content: '';
+  display: inline-block;
+  margin-right: .5rem;
+  margin-bottom: 4px;
+  width: 1.2rem;
+  height: 1.8rem;
+  background: url(../images/pack.png) no-repeat center;
+  background-size: 100%;
+  vertical-align: top;
+}
+.production .card-set .massa:before {
+  content: '';
+  display: inline-block;
+  margin-right: .5rem;
+  margin-bottom: 4px;
+  width: 1.5rem;
+  height: 1.6rem;
+  background: url(../images/food-scale-tool.png) no-repeat center;
+  background-size: 100%;
+  vertical-align: top;
 }
 .production .card-footer {
   background-color: #ffffff;

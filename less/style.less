@@ -140,11 +140,7 @@ span {
 		font-size: 14px;
 		.shrift-monstr();
 		font-weight: 600;
-	}
-/* .card {
-	max-width: 380px;
-	max-height: 515px;
-} */
+}
 .sign-lang, .messendger, .yoga, .list-inline, .card_prod {
 	display: flex;
 	justify-content: space-between;
@@ -311,16 +307,14 @@ nav {
 }
 .production {
 	text-align: center;
+	padding-bottom: 20px;
 	p {
 		font-size: 18px;
 		padding: 25px 24%;
 	}
-	/* .card-deck {
-		margin-bottom: 40px;
+	.container {
+		position: relative;
 	}
-	.slick-active {
-	  outline: none;
-	} */
 	.arrow {
 	  top: 23%;
 	  -webkit-transform: translateY(-50%);
@@ -333,7 +327,7 @@ nav {
 	  opacity: .7; 
 	}
 	.prev {
-	  left: 10px;
+	  left: 20px;
 	  background: url(../images/arrow-left4.png) center no-repeat;
 	  background-size: 70%;
 	  &:hover {
@@ -344,7 +338,7 @@ nav {
 	  }
 	}
 	.next {
-	  right: 10px;
+	  right: 20px;
 	  background: url(../images/right-arrow.png) center no-repeat;
 	  background-size: 70%;
 	} 
@@ -352,10 +346,9 @@ nav {
 		margin-bottom: 40px;	
 	}
 	.card {	
-		/* margin-left: 10px;
+		margin-left: 10px;
 		margin-right: 10px;
-		height: 527px;*/
-		width: 350px; 
+		height: 527px;
 		&:hover {			
 			border: 1px solid #93B474;
 			.zoom {
@@ -393,42 +386,68 @@ nav {
 			padding: 25px 20px;
 			p {
 				padding: 0;
-			}		
-			.card-title {
-				font-size: 18px;
-				font-weight: bold;
-				padding-bottom: 10px
 			}
-			.card-art {
-				font-size: 15px;
-				color: @l-gray;
+		}		
+		&-title {
+			font-size: 18px;
+			font-weight: bold;
+			padding-bottom: 10px
+		}
+		&-art {
+			font-size: 15px;
+			color: @l-gray;
+		}
+		&-text {
+			font-size: 16px;
+			.shrift-ral();
+			font-weight: bold;
+			/* width: 250px; */				
+			margin-bottom: 10px;
+			margin-top: 10px;
+		}
+		&-set {
+			display: flex;
+			justify-content: space-between;
+			font-size: 14px;
+			.massa, .pack {	
+				line-height:1.2;
+				align-items: center;
+				
+				div {
+					display: inline-block;
+				}
+					
 			}
-			.card-text {
-				font-size: 16px;
-				.shrift-ral();
-				font-weight: bold;
-				width: 250px;				
-				margin-bottom: 10px;
-				margin-top: 10px;
-			}
-			.card-set {
-				display: flex;
-				justify-content: space-between;
-				font-size: 14px;
-				.massa, .pack {	
-					line-height:1;
-					display: flex;
-					align-items: center;
-					img {
-						vertical-align: middle;
-						margin-right: 10px;
-					}
-					div {
-						width: 75px;
-					}	
+			.pack {
+				&:before {
+					content: '';
+					display: inline-block;
+					margin-right: .5rem;
+					margin-bottom: 4px;
+					width: 1.2rem;
+					height: 1.8rem;
+					background: url(../images/pack.png) no-repeat center;
+					-webkit-background-size: 100%;
+					background-size: 100%;
+					vertical-align: top; 
 				}
 			}
-		}	
+			.massa {
+				&:before {
+					content: '';
+					display: inline-block;
+					margin-right: .5rem;
+					margin-bottom: 4px;
+					width: 1.5rem;
+					height: 1.6rem;
+					background: url(../images/food-scale-tool.png) no-repeat center;
+					-webkit-background-size: 100%;
+					background-size: 100%;
+					vertical-align: top; 
+				}
+			}
+		}
+			
 		&-footer {
 			background-color: @light;			
 			border-top: 1px solid #ccc;

@@ -608,6 +608,7 @@ nav li {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 20px;
+  padding: 0;
 }
 .block5-2 {
   background: url(../images/block5-2.jpg) center no-repeat;
